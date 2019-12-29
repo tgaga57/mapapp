@@ -15,20 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-Jx-mGR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Pqn-Jx-mGR">
                                 <rect key="frame" x="0.0" y="44" width="414" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kIS-iN-w81">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kIS-iN-w81">
                                 <rect key="frame" x="0.0" y="86" width="414" height="810"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="kIS-iN-w81" secondAttribute="bottom" id="7Z4-9Z-Dcu"/>
+                            <constraint firstItem="kIS-iN-w81" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JNQ-Qf-ich"/>
+                            <constraint firstItem="Pqn-Jx-mGR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UWQ-cg-yOZ"/>
+                            <constraint firstItem="kIS-iN-w81" firstAttribute="top" secondItem="Pqn-Jx-mGR" secondAttribute="bottom" constant="8" symbolic="YES" id="VqX-aM-h3H"/>
+                            <constraint firstItem="Pqn-Jx-mGR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WQO-S6-xXf"/>
+                            <constraint firstItem="kIS-iN-w81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x1t-NK-Fvr"/>
+                            <constraint firstItem="Pqn-Jx-mGR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xVR-Xq-28C"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="displayMap" destination="kIS-iN-w81" id="Su5-yF-9EB"/>
+                        <outlet property="inputText" destination="Pqn-Jx-mGR" id="isb-9e-JHm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
